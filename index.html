@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- webpage title -->
+    <title>Money master</title>
+
+    <!-- Bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JS link -->
+    <script defer src="js/utilities.js"></script>
+    <script defer src="js/index.js"></script>
+</head>
+<body class="container mt-5">
+    <header class="text-center"><h1>Money master</h1></header>
+
+    <main class="mx-5 mt-5 rounded">
+        <!-- calculation start -->
+        <section>
+            <div class="d-flex flex-column justify-content-end mb-4">
+                <h3 class="text-center ">Income</h3>
+                <input id="total-amount" class="w-50 mx-auto px-3 py-2 " type="text" placeholder="Enter Your Total Amount">
+            </div>
+            <div class="d-flex flex-column mx-auto w-50">
+                <h3 class="text-center ">Expenses</h3>
+                <div class="w-75 mx-auto my-2">
+                    <span>Food : &nbsp;&nbsp;&nbsp;</span>
+                    <input id="food-expense" class="w-75 mx-auto p-2" type="text" placeholder="Enter Your Food expense">
+                </div>
+                <div class="w-75 mx-auto my-2">
+                    <span>Rent : &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <input id="rent-expense" class="w-75 mx-auto p-2" type="text" placeholder="Enter Your Rent expense">
+                </div>
+                <div class="w-75 mx-auto my-2">
+                    <span>Clothes :</span>
+                    <input id="clothes-expense" class="w-75 mx-auto p-2" type="text" placeholder="Enter Your Clothes expense">
+                </div> 
+            </div>
+            <div class="w-50 mx-auto d-flex justify-content-center">
+                <button id="calculate-btn" type="button" class="btn btn-primary w-25">Calculate</button>
+            </div>
+            <div class="w-50 mx-auto d-flex justify-content-center mt-4">
+                <h5>Total Expenses : <span id="total-expense">00</span></h5>
+            </div>
+            <div class="w-50 mx-auto d-flex justify-content-center">
+                <h5>Balance : <span id="total-balance">00</span></h5>
+            </div>
+        </section>
+        <!-- calculation end -->
+
+        <!-- saveings start -->
+        <section class="d-flex align-items-center mt-3">
+            <div class="w-50 mx-auto d-flex justify-content-center align-items-center">
+                <h5>Save : <span class="px-5 py-2 rounded" id="saveing-rate">20</span> &nbsp; %&nbsp; 
+                    <button id="saveings-btn" class="btn btn-primary" type="button">Save</button>
+                </h5>
+            </div>
+        </section>
+        <div>
+            <div class="w-50 mx-auto d-flex justify-content-center mt-4">
+                <h5>Saving Amount : <span id="saving-amount">00</span></h5>
+            </div>
+            <div class="w-50 mx-auto d-flex justify-content-center">
+                <h5>Remaining Balance : <span id="remaining-balance">00</span></h5>
+            </div>
+        </div>
+        <!-- saveings end -->
+    </main>
+</body>
+</html>

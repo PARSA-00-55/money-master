@@ -1,0 +1,27 @@
+ /* *{
+    border: 1px solid red;
+ } */
+ body{
+    background-color: lightgrey;
+ }
+ h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+ }
+main{
+    padding: 1rem;
+    background-color: rgba(202, 202, 202, 0.863);
+}
+span{
+    font-weight: bold;
+}
+input{
+    outline: none;
+    border: none;
+    background-color: rgb(184, 184, 184);
+    border-radius: 5px;
+}
+
+#saveing-rate{
+    background-color:  rgb(184, 184, 184);
+}
