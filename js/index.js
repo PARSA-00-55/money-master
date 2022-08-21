@@ -5,6 +5,11 @@ document.getElementById('calculate-btn').addEventListener('click', function calc
     const foodExpense = getInputValueById('food-expense');
     const rentExpense = getInputValueById('rent-expense');
     const clothesExpense = getInputValueById('clothes-expense');
+
+    if(isNaN(totalBalance && foodExpense && rentExpense && clothesExpense)){
+        alert('Please enter a number');
+        return;
+    }
     //called by id
     const totalBalanceValue = document.getElementById('total-amount');
 
@@ -22,16 +27,15 @@ document.getElementById('calculate-btn').addEventListener('click', function calc
     }
 
     //reset the input field value
-    document.getElementById('total-amount').value = '';
-    document.getElementById('food-expense').value = '';
-    document.getElementById('rent-expense').value = '';
-    document.getElementById('clothes-expense').value = '';
+    // document.getElementById('total-amount').value = '';
+    // document.getElementById('food-expense').value = '';
+    // document.getElementById('rent-expense').value = '';
+    // document.getElementById('clothes-expense').value = '';
 
+    //save button ..
     document.getElementById('saveings-btn').addEventListener('click', function(){
-        // const savingAmount = getElementValueById('saving-amount');
-        // const remainingBalance = getElementValueById('remaining-balance');
         //saving amount
-        const newSavingAmount = (20 / 100)*newtotalBalance;
+        const newSavingAmount = ((20 / 100)*newtotalBalance).toFixed(0);
         setElementValue('saving-amount', newSavingAmount);
         //remaing balance
         const remainingBalance = newtotalBalance - newSavingAmount;
